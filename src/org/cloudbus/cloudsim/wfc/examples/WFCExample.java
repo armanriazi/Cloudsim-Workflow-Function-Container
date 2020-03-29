@@ -345,7 +345,7 @@ public class WFCExample {
 
         return experimentName.toString();
     }
-      /**
+
     /**
      * Gets the maximum number of GB ever used by the application's heap.
      * @return the max heap utilization in GB
