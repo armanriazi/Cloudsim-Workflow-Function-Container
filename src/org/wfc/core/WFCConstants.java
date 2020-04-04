@@ -1,4 +1,4 @@
-package org.cloudbus.cloudsim.wfc.core;
+package org.wfc.core;
 
 import org.cloudbus.cloudsim.power.models.PowerModel;
 import org.cloudbus.cloudsim.power.models.PowerModelSpecPowerHpProLiantMl110G4Xeon3040;

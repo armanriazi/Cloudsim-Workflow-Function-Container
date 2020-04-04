@@ -13,19 +13,18 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.cloudbus.cloudsim.wfc.examples;
+package org.wfc.examples;
 
-import org.cloudbus.cloudsim.wfc.core.WFCDatacenter;
 import java.io.File;
-import java.lang.management.ManagementFactory;
-import java.lang.management.MemoryPoolMXBean;
-import java.lang.management.MemoryType;
-import java.lang.management.MemoryUsage;
+import java.lang.management.*;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import org.cloudbus.cloudsim.container.core.*;
+import org.cloudbus.cloudsim.container.hostSelectionPolicies.*;
+import org.cloudbus.cloudsim.container.resourceAllocatorMigrationEnabled.*;
+import org.cloudbus.cloudsim.container.schedulers.*;
+import org.cloudbus.cloudsim.container.utils.IDs;
+import org.cloudbus.cloudsim.container.vmSelectionPolicies.*;
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.CloudletSchedulerSpaceShared;
 import org.cloudbus.cloudsim.DatacenterCharacteristics;
@@ -34,9 +33,7 @@ import org.cloudbus.cloudsim.Host;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Pe;
 import org.cloudbus.cloudsim.Storage;
-import org.cloudbus.cloudsim.VmAllocationPolicy;
-import org.cloudbus.cloudsim.VmAllocationPolicySimple;
-import org.cloudbus.cloudsim.VmSchedulerTimeShared;
+import org.cloudbus.cloudsim.*;
 import org.cloudbus.cloudsim.container.core.*;
 import org.cloudbus.cloudsim.container.resourceAllocators.*;
 import org.cloudbus.cloudsim.container.containerProvisioners.*;
@@ -49,24 +46,13 @@ import org.workflowsim.WorkflowDatacenter;
 import org.workflowsim.Job;
 import org.workflowsim.WFCEngine;
 import org.workflowsim.WFCPlanner;
-import org.workflowsim.utils.ClusteringParameters;
-import org.workflowsim.utils.OverheadParameters;
-import org.workflowsim.utils.Parameters;
-import org.workflowsim.utils.WFCReplicaCatalog;
-import org.workflowsim.utils.Parameters.ClassType;
-import org.cloudbus.cloudsim.container.core.*;
-import org.cloudbus.cloudsim.container.hostSelectionPolicies.*;
-import org.cloudbus.cloudsim.container.resourceAllocatorMigrationEnabled.PowerContainerVmAllocationPolicyMigrationAbstractHostSelection;
-import org.cloudbus.cloudsim.container.schedulers.*;
-import org.cloudbus.cloudsim.container.utils.IDs;
-import org.cloudbus.cloudsim.container.vmSelectionPolicies.*;
-import org.cloudbus.cloudsim.wfc.core.WFCConstants;
+import org.workflowsim.utils.*;
 import org.cloudbus.cloudsim.util.Conversion;
-import org.workflowsim.failure.FailureGenerator;
-import org.workflowsim.failure.FailureMonitor;
-import org.workflowsim.failure.FailureParameters;
+import org.workflowsim.failure.*;
 import org.workflowsim.utils.DistributionGenerator;
-
+import org.wfc.core.WFCDatacenter;
+import org.wfc.core.WFCConstants;
+import org.workflowsim.utils.Parameters.ClassType;
 /*
  * @author Arman Riazi
  * @since WFC Toolkit 1.0

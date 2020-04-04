@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import org.cloudbus.cloudsim.Vm;
-import org.cloudbus.cloudsim.wfc.core.WFCDatacenter;
+import org.wfc.core.WFCDatacenter;
 import org.workflowsim.WorkflowSimTags;
 
 /**

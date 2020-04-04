@@ -36,7 +36,7 @@ import org.workflowsim.scheduling.StaticSchedulingAlgorithm;
 import org.workflowsim.utils.Parameters;
 import org.workflowsim.utils.Parameters.SchedulingAlgorithm;
 import org.cloudbus.cloudsim.container.core.*;
-import org.cloudbus.cloudsim.wfc.scheduler.WFCScheduler;
+import org.wfc.scheduler.WFCScheduler;
 import org.cloudbus.cloudsim.container.lists.ContainerVmList;
 /**
  * WorkflowScheduler represents a algorithm acting on behalf of a user. It hides
@@ -110,7 +110,7 @@ public class WorkflowScheduler extends WFCScheduler {
             case CloudSimTags.VM_CREATE_ACK:
                 processVmCreate(ev);
                 break;
-            case ContainerCloudSimTags.VM_NEW_CREATE:
+            case containerCloudSimTags.VM_NEW_CREATE:
                 processNewVmCreate(ev);
                 break;
             // A finished cloudlet returned
@@ -129,7 +129,7 @@ public class WorkflowScheduler extends WFCScheduler {
             case WorkflowSimTags.CLOUDLET_UPDATE:
                 processCloudletUpdate(ev);
                 break;
-            case ContainerCloudSimTags.CONTAINER_CREATE_ACK:
+            case containerCloudSimTags.CONTAINER_CREATE_ACK:
                 processContainerCreate(ev);
                 break;
             default:

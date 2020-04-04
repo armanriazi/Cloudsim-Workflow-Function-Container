@@ -1,7 +1,7 @@
 package org.cloudbus.cloudsim.container.resourceAllocatorMigrationEnabled;
 
 import org.cloudbus.cloudsim.container.containerSelectionPolicies.PowerContainerSelectionPolicy;
-import org.cloudbus.cloudsim.wfc.core.WFCDatacenter;
+import org.wfc.core.WFCDatacenter;
 import org.cloudbus.cloudsim.container.core.ContainerHost;
 import org.cloudbus.cloudsim.container.core.ContainerVm;
 import org.cloudbus.cloudsim.container.core.PowerContainerHost;

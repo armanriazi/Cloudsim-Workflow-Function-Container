@@ -1,4 +1,4 @@
-package org.cloudbus.cloudsim.wfc.core;
+package org.wfc.core;
 
 import org.cloudbus.cloudsim.container.core.*;
 import org.cloudbus.cloudsim.container.resourceAllocators.ContainerAllocationPolicy;
@@ -16,13 +16,13 @@ import java.util.List;
 import java.util.Map;
 import org.apache.commons.math3.stat.descriptive.rank.Percentile;
 import org.cloudbus.cloudsim.container.core.Container;
-import org.cloudbus.cloudsim.container.core.ContainerCloudSimTags;
+import org.cloudbus.cloudsim.container.core.containerCloudSimTags;
 import org.cloudbus.cloudsim.container.core.ContainerCloudlet;
 import org.cloudbus.cloudsim.container.core.ContainerDatacenterCharacteristics;
 import org.cloudbus.cloudsim.container.core.ContainerHost;
 import org.cloudbus.cloudsim.container.core.ContainerVm;
 import org.cloudbus.cloudsim.container.schedulers.ContainerCloudletScheduler;
-import org.cloudbus.cloudsim.wfc.core.WFCConstants;
+import org.wfc.core.WFCConstants;
 import org.workflowsim.FileItem;
 import org.workflowsim.Job;
 import org.workflowsim.Task;
@@ -284,11 +284,11 @@ public class WFCDatacenter extends SimEntity {
                 updateCloudletProcessing();
                 checkCloudletCompletion();
                 break;
-            case ContainerCloudSimTags.CONTAINER_SUBMIT:
+            case containerCloudSimTags.CONTAINER_SUBMIT:
                 processContainerSubmit(ev, true);
                 break;
 
-            case ContainerCloudSimTags.CONTAINER_MIGRATE:
+            case containerCloudSimTags.CONTAINER_MIGRATE:
                 processContainerMigrate(ev, false);
                 // other unknown tags are processed by this method
                 break;
@@ -335,7 +335,7 @@ public class WFCDatacenter extends SimEntity {
 
                 }
                 
-                send(ev.getSource(), CloudSim.getMinTimeBetweenEvents(), ContainerCloudSimTags.CONTAINER_CREATE_ACK, data);
+                send(ev.getSource(), CloudSim.getMinTimeBetweenEvents(), containerCloudSimTags.CONTAINER_CREATE_ACK, data);
 
             }
         }
@@ -666,7 +666,7 @@ public class WFCDatacenter extends SimEntity {
             } else {
                 data[2] = CloudSimTags.FALSE;
             }
-            sendNow(ev.getSource(), ContainerCloudSimTags.CONTAINER_CREATE_ACK, data);
+            sendNow(ev.getSource(), containerCloudSimTags.CONTAINER_CREATE_ACK, data);
         }
 
         Log.formatLine(

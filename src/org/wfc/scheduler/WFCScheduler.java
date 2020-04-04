@@ -1,4 +1,4 @@
-package org.cloudbus.cloudsim.wfc.scheduler;
+package org.wfc.scheduler;
 
 import org.cloudbus.cloudsim.container.core.*;
 import org.cloudbus.cloudsim.container.lists.ContainerList;
@@ -17,7 +17,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-import org.cloudbus.cloudsim.wfc.core.WFCConstants;
+import org.wfc.core.WFCConstants;
 import org.workflowsim.Job;
 import org.workflowsim.WorkflowSimTags;
 import org.workflowsim.failure.FailureGenerator;
@@ -248,7 +248,7 @@ public class WFCScheduler extends SimEntity {
                 processVmCreate(ev);
                 break;
             // New VM Creation answer
-            case ContainerCloudSimTags.VM_NEW_CREATE:
+            case containerCloudSimTags.VM_NEW_CREATE:
                 processNewVmCreate(ev);
                 break;            
             case CloudSimTags.CLOUDLET_SUBMIT:
@@ -263,7 +263,7 @@ public class WFCScheduler extends SimEntity {
             case CloudSimTags.CLOUDLET_RETURN:
                 processCloudletReturn(ev);
                 break;           
-            case ContainerCloudSimTags.CONTAINER_CREATE_ACK:
+            case containerCloudSimTags.CONTAINER_CREATE_ACK:
                 processContainerCreate(ev);
                 break;
             case CloudSimTags.END_OF_SIMULATION:
@@ -409,7 +409,7 @@ public class WFCScheduler extends SimEntity {
 
     
     protected void submitContainers(){      
-        sendNow(getDatacenterIdsList().get(0), ContainerCloudSimTags.CONTAINER_SUBMIT,getContainerList());
+        sendNow(getDatacenterIdsList().get(0), containerCloudSimTags.CONTAINER_SUBMIT,getContainerList());
     }
 
     

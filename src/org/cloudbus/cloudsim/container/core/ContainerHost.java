@@ -9,7 +9,7 @@ import org.cloudbus.cloudsim.*;
 import org.cloudbus.cloudsim.core.CloudSim;
 import java.util.ArrayList;
 import java.util.List;
-import org.cloudbus.cloudsim.wfc.core.WFCDatacenter;
+import org.wfc.core.WFCDatacenter;
 
 /**
  * Created by sareh on 10/07/15.

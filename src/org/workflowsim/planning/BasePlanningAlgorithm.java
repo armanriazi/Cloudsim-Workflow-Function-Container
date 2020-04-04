@@ -20,7 +20,7 @@ import java.util.List;
 import org.cloudbus.cloudsim.Datacenter;
 import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.container.core.ContainerVm;
-import org.cloudbus.cloudsim.wfc.core.WFCDatacenter;
+import org.wfc.core.WFCDatacenter;
 import org.workflowsim.Task;
 
 /**

@@ -1,4 +1,4 @@
-package org.cloudbus.cloudsim.wfc.core;
+package org.wfc.core;
 
 import org.cloudbus.cloudsim.container.core.*;
 import org.cloudbus.cloudsim.Log;
@@ -118,7 +118,7 @@ public class WFCPowerContainerDatacenterCM extends WFCPowerContainerDatacenter {
                                     send(
                                             getId(),
                                             containerStartupDelay + vmStartupDelay
-                                            , ContainerCloudSimTags.CONTAINER_MIGRATE,
+                                            , containerCloudSimTags.CONTAINER_MIGRATE,
                                             migrate);
 
                                 } else {
@@ -132,7 +132,7 @@ public class WFCPowerContainerDatacenterCM extends WFCPowerContainerDatacenter {
                                     send(
                                             getId(),
                                             containerStartupDelay + vmStartupDelay
-                                            , ContainerCloudSimTags.CONTAINER_MIGRATE,
+                                            , containerCloudSimTags.CONTAINER_MIGRATE,
                                             migrate);
 
 
@@ -143,7 +143,7 @@ public class WFCPowerContainerDatacenterCM extends WFCPowerContainerDatacenter {
                                 send(
                                         getId(),
                                         containerStartupDelay,
-                                        ContainerCloudSimTags.CONTAINER_MIGRATE,
+                                        containerCloudSimTags.CONTAINER_MIGRATE,
                                         migrate);
 
 
@@ -254,7 +254,7 @@ public class WFCPowerContainerDatacenterCM extends WFCPowerContainerDatacenter {
                 } else {
                     data.put("result", CloudSimTags.FALSE);
                 }
-                send(2, CloudSim.getMinTimeBetweenEvents(), ContainerCloudSimTags.VM_NEW_CREATE, data);
+                send(2, CloudSim.getMinTimeBetweenEvents(), containerCloudSimTags.VM_NEW_CREATE, data);
             }
 
             if (result) {

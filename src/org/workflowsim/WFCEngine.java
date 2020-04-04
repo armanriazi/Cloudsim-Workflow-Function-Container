@@ -15,7 +15,7 @@
  */
 package org.workflowsim;
 
-import org.cloudbus.cloudsim.wfc.scheduler.WFCScheduler;
+import org.wfc.scheduler.WFCScheduler;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -28,11 +28,11 @@ import org.cloudbus.cloudsim.container.core.*;
 import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEntity;
 import org.cloudbus.cloudsim.core.SimEvent;
-import org.cloudbus.cloudsim.wfc.core.WFCConstants;
+import org.wfc.core.WFCConstants;
 import org.workflowsim.reclustering.ReclusteringEngine;
 import org.workflowsim.utils.Parameters;
-import static org.cloudbus.cloudsim.wfc.examples.WFCExample.createVmList;
-import static org.cloudbus.cloudsim.wfc.examples.WFCExample.createContainerList;
+import static org.wfc.examples.WFCExample.createVmList;
+import static org.wfc.examples.WFCExample.createContainerList;
 
 /**
  * WFCEngine represents a engine acting on behalf of a user. It hides VM
