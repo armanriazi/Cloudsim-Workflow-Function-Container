@@ -1,5 +1,5 @@
 # cloudsim-workflow-function-container
-Workflow corresponds with Function Composition in simulation env but not with Lambda or Cloud Function in production env
+Modeling And Simulation Of Running Workflow In the Containers
 
 
 # Workflow-Function-Container-Plus
