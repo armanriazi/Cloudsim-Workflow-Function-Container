@@ -169,9 +169,11 @@ public class WFCExample {
                     null, 0);
             WFCReplicaCatalog.init(file_system);
 
-            FailureMonitor.init();
-            FailureGenerator.init();
-      
+            
+            if (failure_flag) {
+              FailureMonitor.init();
+              FailureGenerator.init();
+            }
             
             WFCReplicaCatalog.init(file_system);
             
