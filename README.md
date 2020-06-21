@@ -1,4 +1,4 @@
-# cloudsim-workflow-function-container
+# Cloudsim-Workflow-Function-Container
 Modeling And Simulation Of Running Workflow In the Containers
 
 
@@ -52,13 +52,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+*Make it with ❤️ for you
 ## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+**
 # Related Repositories
 [Workflow-Function-Container-Plus](https://github.com/armanriazi/Workflow-Function-Container-Plus)
 # https://github.com/armanriazi/Workflow-Function-Container-Plus/wiki
